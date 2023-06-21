@@ -44,7 +44,5 @@ int main()
 				break ;
 		}
 	}
-	// if (command != "EXIT" && std::cin.eof() == false)
-	// 	std::cout << "You pressed ^D, exiting now. Good Bye." << command << std::endl;
     return (0);
 }
