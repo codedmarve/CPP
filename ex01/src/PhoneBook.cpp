@@ -26,7 +26,7 @@ PhoneBook::~PhoneBook(void)
 
 int		PhoneBook::getInfo(void)
 {
-	int i = 0, j = 0;
+	int i = 0, j;
 	std::string info[5];
 
 	while (i < 5)
@@ -42,6 +42,7 @@ int		PhoneBook::getInfo(void)
 		if (i == 4)
 			std::cout << "Enter darkest secret: ";
 		std::getline(std::cin, info[i]);
+		j = 0;
 		while (i == 3 && info[i] != "" && isdigit(info[i][j]))
 			j++;
 		if (i == 3 && info[i] != "" && j != (int)info[i].length())
@@ -60,7 +61,7 @@ int		PhoneBook::getInfo(void)
 		else
 			i++;
 	}
-	PhoneBook::_putContact(info[0], info[1], info[2], info[3], info[4]);
+	_putContact(info[0], info[1], info[2], info[3], info[4]);
 	std::cout << "Contact saved" << std::endl;
 	return (1);
 }
@@ -75,7 +76,7 @@ void	PhoneBook::_putContact(std::string fn, std::string ln, std::string nn, std:
 	else
 	{
 		std::cout << "Oldest Contact is replaced by the new Contact" << std::endl;
-		PhoneBook::_replaceOldestContact();
+		_replaceOldestContact();
 		list[_entry].addEntry(this->_entry, fn, ln, nn, pn, ds);
 	}
 }
@@ -91,7 +92,7 @@ void	PhoneBook::_replaceOldestContact(void)
 
 int		PhoneBook::searchEntries(void)
 {
-	if (PhoneBook::_displayExtract())
+	if (_displayExtract())
 	{
 		std::cout << "Write index: ";
 		std::getline(std::cin, _userInput);
@@ -101,7 +102,7 @@ int		PhoneBook::searchEntries(void)
 			std::cout << "Exiting phonebook... GOOD BYE" << std::endl;
 			return (0);
 		}
-		while (!PhoneBook::_displayData(_userInput))
+		while (!_displayData(_userInput))
 		{
 			if (std::cin.eof() == true)
 			{
