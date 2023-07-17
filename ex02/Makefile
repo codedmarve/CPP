@@ -1,21 +1,21 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: moduwole <moduwole@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/06/06 00:57:06 by moduwole          #+#    #+#              #
-#    Updated: 2023/06/06 00:57:06 by moduwole         ###   ########.fr        #
+#    Created: 2023/07/10 10:05:20 by moduwole          #+#    #+#              #
+#    Updated: 2023/07/10 10:05:20 by moduwole         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	megaphone
+NAME	=	account
 
-SRC		=	$(wildcard *.cpp)
-OBJ		=	$(SRC:.cpp=.o)
+SRC	=	$(wildcard *.cpp)
+OBJ	=	$(SRC:.cpp=.o)
 
-CC		=	c++
+CC	=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 

@@ -43,7 +43,7 @@ int		PhoneBook::getInfo(void)
 			std::cout << "Enter darkest secret: ";
 		std::getline(std::cin, info[i]);
 		j = 0;
-		while (i == 3 && info[i] != "" && isdigit(info[i][j]))
+		while (i == 3 && info[i] != "" && std::isdigit(info[i][j]))
 			j++;
 		if (i == 3 && info[i] != "" && j != (int)info[i].length())
 		{

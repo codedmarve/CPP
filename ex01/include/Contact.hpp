@@ -17,21 +17,21 @@
 #include <iomanip>
 
 class Contact{
-	private:
-		std::string    _firstName;
-		std::string    _lastName;
-		std::string    _nickName;
-		std::string    _phoneNumber;
-		std::string    _darkestSecret;
+private:
+	std::string    _firstName;
+	std::string    _lastName;
+	std::string    _nickName;
+	std::string    _phoneNumber;
+	std::string    _darkestSecret;
 
-	public:
-		Contact (void);
-		~Contact (void);
+public:
+	Contact (void);
+	~Contact (void);
 
-		int		index;
-		void	addEntry(int entry, std::string fn, std::string ln, std::string nn, std::string pn, std::string ds);
-		void	putName(void);
-		void    putEntry(void);
+	int		index;
+	void	addEntry(int entry, std::string fn, std::string ln, std::string nn, std::string pn, std::string ds);
+	void	putName(void);
+	void    putEntry(void);
 };
 
 
